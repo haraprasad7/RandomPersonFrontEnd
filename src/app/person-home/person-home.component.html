@@ -1,0 +1,22 @@
+
+<div class="form-input">
+    <div>
+            <mat-label>No of random person data</mat-label>
+            <input matInput type="text" [(ngModel)]="noOfPerson">
+        <button mat-raised-button color="primary" (click)="generateListOfPerson()">Generate</button>
+    </div>
+    <div>
+        <mat-label>Random Person Data ENTER ID</mat-label>
+        <input matInput type="text" [(ngModel)]="randomId">
+      <button mat-raised-button color="primary" (click)="generateOnePerson()">Generate</button>
+    </div>
+</div>
+<div class="results">
+    <div  *ngFor="let person of personResults">
+        <app-person-cards [personData]="person"></app-person-cards>
+        <br>
+    </div>
+
+</div>
+
+  
